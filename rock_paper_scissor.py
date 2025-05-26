@@ -24,12 +24,25 @@ import random
 
 iteam_list = ['Paper','Rock', 'Scissor']
 computer_choice = random.choice(iteam_list)
-print(computer_choice)
+user_choice = input("Enter Your Choice: ").title()
 
-# while True:
-#     print('''
-#           Select One of Them
-#           1. Rock
-#           2. Paper
-#           3. Scissor
-#           ''')
+if user_choice == computer_choice:
+    print("Match Tie")
+    
+elif user_choice == 'Rock':
+    if computer_choice == 'Paper':
+        print("Computer Win")
+    else:
+        print("User Win")
+elif user_choice == 'Paper':
+    if computer_choice == 'Rock':
+        print("User Win")
+    else:
+        print("Computer Win")
+elif user_choice == 'Scissor':
+    if computer_choice == 'Rock':
+        print('Computer Win')
+    else:
+        print("User Win")
+else:
+    print("Invlaid Input plz try again! ")
