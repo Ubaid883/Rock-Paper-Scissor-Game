@@ -21,28 +21,51 @@ Case 3:
 ''' 
 
 import random
+# select these word by computer
+iteam_list = ['Rock', 'Paper','Scissor']
+computer_result = 0
+user_result = 0
+tie_match = 0
 
-iteam_list = ['Paper','Rock', 'Scissor']
-computer_choice = random.choice(iteam_list)
-user_choice = input("Enter Your Choice: ").title()
-
-if user_choice == computer_choice:
-    print("Match Tie")
+# define funcation to proceed Game
+def Game(user, computer):
+    global user_result, computer_result, tie_match
+    if user == computer:
+        print("Match Tie")
+        tie_match +=1
+        print(f'Matches Ties: {tie_match}')
     
-elif user_choice == 'Rock':
-    if computer_choice == 'Paper':
-        print("Computer Win")
+    elif user == 'Rock':
+        if computer == 'Paper':
+            computer_result +=1
+            print("Computer Win")
+            print(f'Computer Wins Match: {computer_result}')
+            
+        else:
+            print("User Win")
+            user_result +=1
+            print(f'User Wins Match: {user_result}')
+            
+    elif user == 'Paper':
+        if computer == 'Rock':
+            print("User Win")
+            user_result +=1
+            print(f'User Wins Match: {user_result}')
+        else:
+            computer_result +=1
+            print("Computer Win")
+            print(f'Computer Wins Match: {computer_result}')
+    elif user == 'Scissor':
+        if computer == 'Rock':
+            print('Computer Win')
+        else:
+            print("User Win")
+            user_result +=1
+            print(f'User Wins Match: {user_result}')
     else:
-        print("User Win")
-elif user_choice == 'Paper':
-    if computer_choice == 'Rock':
-        print("User Win")
-    else:
-        print("Computer Win")
-elif user_choice == 'Scissor':
-    if computer_choice == 'Rock':
-        print('Computer Win')
-    else:
-        print("User Win")
-else:
-    print("Invlaid Input plz try again! ")
+        print("Invlaid Input plz try again! ")
+        
+while True:
+    computer_choice = random.choice(iteam_list)
+    user_choice = input("Enter Your Choice, (Rock, Paper, Scissor): ").title()
+    Game(user_choice, computer_choice)
