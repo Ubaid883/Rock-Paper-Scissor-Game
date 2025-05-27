@@ -37,4 +37,25 @@ No external libraries are required
 - Paper beats Rock
 - Same choices result in a draw
 
+## 📦 Example Output
+
+    ```bash
+    Enter your choice (rock, paper, scissors): rock
+Computer chose: scissors
+You win this round!
+
+Enter your choice (rock, paper, scissors): paper
+Computer chose: rock
+You win this round!
+
+Enter your choice (rock, paper, scissors): scissors
+Computer chose: rock
+Computer wins this round!
+
+--- Game Over ---
+Your Wins: 2
+Computer Wins: 1
+Draws: 0
+
+
 
