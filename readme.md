@@ -41,21 +41,23 @@ No external libraries are required
 
     ```bash
     Enter your choice (rock, paper, scissors): rock
-Computer chose: scissors
-You win this round!
+    Computer chose: scissors
+    You win this round!
 
-Enter your choice (rock, paper, scissors): paper
-Computer chose: rock
-You win this round!
+    Enter your choice (rock, paper, scissors): paper
+    Computer chose: rock
+    You win this round!
 
-Enter your choice (rock, paper, scissors): scissors
-Computer chose: rock
-Computer wins this round!
+    Enter your choice (rock, paper, scissors): scissors
+    Computer chose: rock
+    Computer wins this round!
 
---- Game Over ---
-Your Wins: 2
-Computer Wins: 1
-Draws: 0
+    --- Game Over ---
+    Your Wins: 2
+    Computer Wins: 1
+    Draws: 0
+
+
 
 
 
