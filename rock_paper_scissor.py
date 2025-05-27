@@ -67,13 +67,12 @@ def Game(user, computer):
         
 while True:
     print('''
-          Write This Ones 
-          Rock, Paper, Scissor
-          4. Exit
+          🎯 Rock, Paper, Scissor Game!\n
+          exit, for leave the Game
           '''
           )
     computer_choice = random.choice(iteam_list)
     user_choice = input("Enter Your Choice, (Rock, Paper, Scissor): ").title()
     Game(user_choice, computer_choice)
-    if user_choice == '4':
+    if user_choice == 'exit':
         break
