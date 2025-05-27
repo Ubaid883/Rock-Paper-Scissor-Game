@@ -23,13 +23,13 @@ Case 3:
 import random
 # select these word by computer
 iteam_list = ['Rock', 'Paper','Scissor']
-computer_result = 0
-user_result = 0
-tie_match = 0
+
 
 # define funcation to proceed Game
 def Game(user, computer):
-    global user_result, computer_result, tie_match
+    computer_result = 0
+    user_result = 0
+    tie_match = 0
     if user == computer:
         print("Match Tie")
         tie_match +=1
@@ -38,28 +38,34 @@ def Game(user, computer):
     elif user == 'Rock':
         if computer == 'Paper':
             computer_result +=1
-            print("Computer Win")
+            print(f'Computer chose: {computer}')
+            print("Computer Win this round")
             print(f'Computer Wins Match: {computer_result}')
             
         else:
-            print("User Win")
+            print("User Win this round")
             user_result +=1
+            print(f'Computer chose: {computer}')
             print(f'User Wins Match: {user_result}')
             
     elif user == 'Paper':
         if computer == 'Rock':
-            print("User Win")
+            print("User Win this round")
             user_result +=1
+            print(f'Computer chose: {computer}')
             print(f'User Wins Match: {user_result}')
         else:
             computer_result +=1
-            print("Computer Win")
+            print(f'Computer chose: {computer}')
+            print("Computer Win this round")
             print(f'Computer Wins Match: {computer_result}')
     elif user == 'Scissor':
         if computer == 'Rock':
-            print('Computer Win')
+            print(f'Computer chose: {computer}')
+            print("Computer Win this round")
         else:
-            print("User Win")
+            print("User Win this round")
+            print(f'Computer chose: {computer}')
             user_result +=1
             print(f'User Wins Match: {user_result}')
     else:
